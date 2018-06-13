@@ -284,7 +284,7 @@
 				<td class="formularioDoCarrinho-item">
 					<h2 class="formularioDoCarrinho-item-titulo">#{carrinhoItem.livro.titulo}</h2>
 				</td>
-				<td class="formularioDoCarrinho-item formularioDoCarrinho-item-preco">R$#{carrinhoItem.livro.preco}</td>
+				<td class="formularioDoCarrinho-item formularioDoCarrinho-item-preco">R$#{carrinhoCompras.getTotal(carrinhoItem)}</td>
 				<td class="formularioDoCarrinho-item">
 					<input class="formularioDoCarrinho-item-quantidade"
 						   type="number"
@@ -309,7 +309,7 @@
 					<button class="formularioDoCarrinho-atualizar" type="submit" name="update">Atualizar</button>
 				</td>
 				<td class="formularioDoCarrinho-rodape-item">
-					R$29,90
+					R$#{carrinhoCompras.getTotal()}
 				</td>
 				<td></td>
 			</tr>
