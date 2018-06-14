@@ -57,6 +57,7 @@ public class CarrinhoCompras implements Serializable {
 
 	public void finalizar(Compra compra) {
 		compra.setItens(this.toJson());
+		compra.setTotal(this.getTotal());
 		this.compraDao.salvar(compra);
 	}
 

@@ -18,4 +18,9 @@ public class CompraDao implements Serializable {
 		this.entityManager.persist(compra);
 	}
 
+	public Compra buscaPorUuid(String uuid) {
+		return this.entityManager.createQuery("select c from Compra c where c.uuid = :uuid", Compra.class)
+				.setParameter("uuid", uuid).getSingleResult();
+	}
+
 }
